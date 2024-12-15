@@ -1,16 +1,16 @@
 class Storage {
   constructor(params) {
-    this.items = params;
+    this.#items = params;
   }
   getItems() {
-    return this.items;
+    return this.#items;
   }
   addItem(newItem) {
-    this.items.push(newItem);
+    this.#items.push(newItem);
   }
   removeItem(itemToRemove) {
-    const index = this.items.indexOf(itemToRemove);
-    if (index >= 0) this.items.splice(index, 1);
+    const index = this.#items.indexOf(itemToRemove);
+    if (index >= 0) this.#items.splice(index, 1);
   }
 }
 
